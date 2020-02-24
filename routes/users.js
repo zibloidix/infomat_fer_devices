@@ -1,6 +1,7 @@
-const User = require('../models/user');
+const hidePrivateFields = require('../utils/hide-private-fields');
 const express = require('express');
 const router = express.Router();
+const User = require('../models/user');
 
 router.post('/', create);
 router.get('/', read);
@@ -29,7 +30,7 @@ function readOne(req, res, next) {
   User.findOne({ _id })
     .populate('lpu')
     .exec( (err, user) => {
-      res.status(200).send(user);
+      res.status(200).send(hidePrivateFields(user));
     }); 
 }
 
@@ -46,5 +47,7 @@ function _delete(req, res, next) {
     .then( user => res.status(200).send(user) )
     .catch( err => res.status(500).send(err) );
 }
+
+
 
 module.exports = router;

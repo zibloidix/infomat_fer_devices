@@ -1,0 +1,1 @@
+module.exports = require('./hide-private-fields.js');

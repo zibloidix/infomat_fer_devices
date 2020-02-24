@@ -1,0 +1,600 @@
+{
+	"info": {
+		"_postman_id": "ea608d4e-00fd-4174-a432-57e548da1630",
+		"name": "infomat_fer_devices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lpu",
+			"item": [
+				{
+					"name": "CreateLpu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Lpu name\",\n\t\"code\": \"651101\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/lpus",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lpus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadLpus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/lpus",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lpus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadLpu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/lpus/5e4d26120e3ded6d76962602",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lpus",
+								"5e4d26120e3ded6d76962602"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateLpu",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Охинская ЦРБ3\",\n\t\"code\": \"651103\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/lpus/5e4d26120e3ded6d76962602",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lpus",
+								"5e4d26120e3ded6d76962602"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteLpu",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Долинская ЦРБ\",\n\t\"code\": \"651102\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/lpus/5e4d26120e3ded6d76962602",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lpus",
+								"5e4d26120e3ded6d76962602"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"lpu\": \"5e4be2b238ce034755bfd10b\",\n  \"name\": \"Oleg Ivanov\",\n  \"position\": \"System Administrator 2\",\n  \"email\": \"user@email.com\",\n  \"phone\": \"45-23-19\",\n  \"password\": \"111\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/5e4d32a7cb6c3306299eed14",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5e4d32a7cb6c3306299eed14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Oleg Ivanov\",\n    \"position\": \"System Administrator Cat. 1\",\n    \"email\": \"oleg.ivanov@email.com\",\n    \"phone\": \"45-23-19\",\n    \"password\": \"PasW$&03*rd\",\n    \"__v\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/5e4d32a7cb6c3306299eed14",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5e4d32a7cb6c3306299eed14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Oleg Ivanov\",\n    \"position\": \"System Administrator Cat. 1\",\n    \"email\": \"oleg.ivanov@email.com\",\n    \"phone\": \"45-23-19\",\n    \"password\": \"PasW$&03*rd\",\n    \"__v\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/5e4d979e95922111964896fb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"5e4d979e95922111964896fb"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Device",
+			"item": [
+				{
+					"name": "CreateDevice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"lpu\": \"5e4be2b238ce034755bfd10b\",\n  \"name\": \"Infomat\",\n  \"os\": \"Windiws\",\n  \"screenWidth\": 1024,\n  \"screenHeight\": 768,\n  \"keyboard\": false,\n  \"webCamera\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/devices",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadDevices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/devices",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadDevice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/devices/5e53bfb35354c2cd64e846dc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"devices",
+								"5e53bfb35354c2cd64e846dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDevice",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"name\": \"Infomat 2020\",\n    \"os\": \"Windows\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/devices/5e53bfb35354c2cd64e846dc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"devices",
+								"5e53bfb35354c2cd64e846dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDevice",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"5e4e897759bc3449f21f9e92\",\n    \"isActivated\": false,\n    \"name\": \"Infomat 2\",\n    \"os\": \"Windiws\",\n    \"screenWidth\": 1024,\n    \"screenHeight\": 768,\n    \"keyboard\": false,\n    \"webCamera\": true,\n    \"activatedCode\": 494056,\n    \"__v\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/devices/5e53bfb35354c2cd64e846dc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"devices",
+								"5e53bfb35354c2cd64e846dc"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user1@email.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"5e4d32a7cb6c3306299eed14\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/logout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"activatedCode\": \"590993\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/activate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"activate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNGZkN2JhMTUwNzIzMDllMzRkZDJlMiIsImlhdCI6MTU4MjU0NzQ5NX0.26x80vrNZ8o9s11oyTEn3AwsmPdye-6S5kiakLntJvw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1dbdfccd-8c8c-4e28-b753-9edd09819563",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c62c2b5e-b7c1-41aa-9c8d-3e9250ddad5f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

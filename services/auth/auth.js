@@ -1,3 +1,4 @@
+const hidePrivateFields = require('../../utils/hide-private-fields');
 const User = require('../../models/user');
 const jwt = require('jsonwebtoken');
 
@@ -6,7 +7,9 @@ async function auth(req, res, next) {
   const token = getToken(authHeader);
   const user = await getUserByToken(token);
   const isValidToken = validateToken(token, user);
-  return isValidToken ? next() : res.status(401).send();
+  return isValidToken 
+    ? (req.user = hidePrivateFields(user), next()) 
+    : res.status(401).send();
 }
 
 function getAuthHeader(req) {

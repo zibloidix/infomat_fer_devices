@@ -6,11 +6,13 @@ const logger = require('morgan');
 const path = require('path');
 const auth = require('./services/auth');
 
-const indexRouter = require('./routes/index');
-const devicesRouter = require('./routes/devices');
-const usersRouter = require('./routes/users');
 const lpusRouter = require('./routes/lpus');
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
 const loginRouter = require('./routes/login');
+const logoutRouter = require('./routes/logout');
+const devicesRouter = require('./routes/devices');
+const activateRouter = require('./routes/activate');
 
 const app = express();
 
@@ -25,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
+app.use('/activate', activateRouter);
 app.use(auth);
 app.use('/devices', devicesRouter);
 app.use('/users', usersRouter);

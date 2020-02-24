@@ -16,7 +16,8 @@ function create(req, res, next) {
 }
 
 function read(req, res, next) {
-  Device.find({})
+  const { lpu } = req.user; 
+  Device.find({ lpu })
     .populate('lpu')
     .exec( (err, devices) => { 
       res.status(200).send(devices) 
@@ -25,7 +26,8 @@ function read(req, res, next) {
 
 function readOne(req, res, next) {
   const { id: _id } = req.params; 
-  Device.findOne({ _id })
+  const { lpu } = req.user; 
+  Device.findOne({ _id, lpu })
     .populate('lpu')
     .exec((err, device) => { 
       res.status(200).send(device);
@@ -34,14 +36,16 @@ function readOne(req, res, next) {
 
 function update(req, res, next) {
   const { id: _id } = req.params;
-  Device.findByIdAndUpdate(_id, req.body)
+  const { lpu } = req.user; 
+  Device.findOneAndUpdate({ _id, lpu }, req.body)
     .then( device => res.status(200).send(device) )
     .catch( err => res.status(500).send(err) );
 }
 
 function _delete(req, res, next) {
   const { id: _id } = req.params;
-  Device.findByIdAndDelete({ _id })
+  const { lpu } = req.user; 
+  Device.findOneAndDelete({ _id, lpu })
     .then( device => res.status(200).send(device) )
     .catch( err => res.status(500).send(device) );
 }
