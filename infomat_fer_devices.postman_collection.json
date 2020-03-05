@@ -22,7 +22,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Lpu name\",\n\t\"code\": \"651101\"\n}",
+							"raw": "{\n\t\"_id\": \"5e5b9e275e829e1fdf0b9942\",\n\t\"name\": \"Lpu name 2\",\n\t\"code\": \"651101\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -169,7 +169,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"lpu\": \"5e4be2b238ce034755bfd10b\",\n  \"name\": \"Oleg Ivanov\",\n  \"position\": \"System Administrator 2\",\n  \"email\": \"user@email.com\",\n  \"phone\": \"45-23-19\",\n  \"password\": \"111\"\n}",
+							"raw": "{\n  \"lpu\": \"5e5ba1d3ba6a6a2cf0f83eaa\",\n  \"name\": \"Bruce Willis\",\n  \"position\": \"Police Officer - NYPD\",\n  \"email\": \"b.willis@nypd.com\",\n  \"phone\": \"911\",\n  \"password\": \"DieHard1988\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -330,7 +330,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"lpu\": \"5e4be2b238ce034755bfd10b\",\n  \"name\": \"Infomat\",\n  \"os\": \"Windiws\",\n  \"screenWidth\": 1024,\n  \"screenHeight\": 768,\n  \"keyboard\": false,\n  \"webCamera\": true\n}",
+							"raw": "{\n  \"_id\": \"5e4be2b238ce034755bfd10c\",\n  \"lpu\": \"5e4be2b238ce034755bfd10b\",\n  \"name\": \"Infomat\",\n  \"os\": \"Windiws\",\n  \"screenWidth\": 1024,\n  \"screenHeight\": 768,\n  \"keyboard\": false,\n  \"webCamera\": true,\n  \"address\": \"Lenina Street 56\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -472,7 +472,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"user1@email.com\",\n    \"password\": \"123\"\n}",
+					"raw": "{\n    \"email\": \"user@email.com\",\n    \"password\": \"123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -494,21 +494,11 @@
 		{
 			"name": "Logout",
 			"request": {
-				"auth": {
-					"type": "noauth"
-				},
 				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"_id\": \"5e4d32a7cb6c3306299eed14\"\n}",
+					"raw": "{\n    \"email\": \"user@email.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -569,7 +559,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNGZkN2JhMTUwNzIzMDllMzRkZDJlMiIsImlhdCI6MTU4MjU0NzQ5NX0.26x80vrNZ8o9s11oyTEn3AwsmPdye-6S5kiakLntJvw",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNGZkN2JhMTUwNzIzMDllMzRkZDJlMiIsImlhdCI6MTU4MzM3NjY1OX0.Jiqng6wnNuul7Kxwks4rdGUUE5iheppPT3lSYxpMiow",
 				"type": "string"
 			}
 		]

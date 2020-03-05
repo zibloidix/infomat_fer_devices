@@ -7,7 +7,6 @@ const md5 = require('md5');
 
 router.post('/', (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email,  md5(password));
   User.findOne({ email, password: md5(password) })
     .then( user => {
       if (user) {

@@ -2,6 +2,7 @@ const hidePrivateFields = require('../utils/hide-private-fields');
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user');
+const md5 = require('md5');
 
 router.post('/', create);
 router.get('/', read);
@@ -11,7 +12,7 @@ router.delete('/:id', _delete);
 
 function create(req, res, next) {
   const user = new User(req.body);
-  this.password = md5(this.password);
+  user.password = md5(user.password);
   user.save()
     .then( user => res.status(201).send(user) )
     .catch( err => res.status(500).send(err) );

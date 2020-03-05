@@ -34,7 +34,7 @@ async function update(req, res, next) {
     new: true, 
     runValidators: true 
   })
-    .then( lpu => res.status(201).send(lpu) )
+    .then( lpu => res.status(200).send(lpu) )
     .catch( err => res.status(500).send(err) )
 }
 
